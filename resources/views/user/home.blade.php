@@ -5,26 +5,26 @@
     <x-header/>
     <!-- end of header -->
     <!-- categories -->
-    <x-categories/>
+    <x-experiences/>
     <!-- end of categories -->
     <!-- all categories -->
-    <x-all-categories/>
+    <x-categories/>
     <!-- end of all categories -->
 
     <!-- Features -->
     <x-occasion/>
     <!-- end of features -->
+    <!-- Features -->
+    <x-grid/>
+    <!-- end of features -->
 
     <!-- Includes -->
-    <x-includes/>
+{{--    <x-includes/>--}}
     <!-- end includes -->
 
-    <!-- Grid for all categories and occasion -->
-{{--    <x-grid/>--}}
-    <!-- end Grid for all categories and occasion -->
 
     <!-- cancellation and rescheduling -->
-    <x-terms/>
+{{--    <x-terms/>--}}
     <!-- end cancellation and rescheduling -->
     <!-- cancellation and rescheduling -->
     <x-extras/>

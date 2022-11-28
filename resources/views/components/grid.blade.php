@@ -1,88 +1,15 @@
-<div class="container my-10">
-    <div class="grid grid-cols-3">
-        <div class="mx-2 px-4 my-2 h-64 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg1.jpeg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
+<div class="container p-4">
+    <div class="flex items-centerjustify justify-between bg-gray-100 rounded-md p-6 mx-3 px-3">
+        <div>
+            <p class="text-gray-700 font-semibold ml-6 px-2">If you want to create an event kindly send a message</p>
         </div>
-        <div class="mx-2 px-4 my-2 h-72 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg2.jpeg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
+        <div class="mr-6 px-2">
+            <a href="{{ route('messages.index') }}">
+            <button type="submit"
+                    class="px-4 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
+                Send Message
+            </button>
+            </a>
         </div>
-        <div class="mx-2 px-4 my-2 h-72 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg3.jpeg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
-        </div>
-        <div class="mx-2 px-4 my-2 h-72 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg4.jpeg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
-        </div>
-        <div class="mx-2 px-4 my-2 h-72 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg5.jpg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
-        </div>
-        <div class="mx-2 px-4 my-2 h-72 w-full">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg6.jpeg') }}" alt="" class="h-64 w-full rounded-xl">
-                </a>
-        </div>
-    </div>
-
-    <div class="flex items-center justify-between">
-        <p>Explore our most popular blooms</p>
-        <a href="#" class="font-bold text-sm text-blue-600">View All</a>
-    </div>
-
-    <div class="grid grid-cols-6 grid-rows-2">
-        <div class="mx-2 px-2 my-2 w-full rounded-lg col-span-2 h-80 row-span-2">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg1.jpeg') }}" alt="" class="h-80 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg2.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg3.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg4.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg5.jpg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg6.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg1.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg2.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-        <div class="mx-2 px-2 my-2 w-full rounded-lg">
-            <a href="#">
-            <img src="{{ asset('assets/images/bg/bg3.jpeg') }}" alt="" class="h-36 w-full rounded-lg">
-                </a>
-        </div>
-
     </div>
 </div>

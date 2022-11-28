@@ -27,6 +27,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type',
     ];
 
     /**
@@ -58,4 +59,26 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    // User Types
+    public const ADMIN = 'A';
+    public const USER = 'U';
+
+    public function is_admin()
+    {
+        return $this->user_type == User::ADMIN;
+    }
+
+    public function is_user()
+    {
+        return $this->user_type == User::USER;
+    }
+    public function booking()
+    {
+        return $this->hasMany(Booking::class);
+    }
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
 }

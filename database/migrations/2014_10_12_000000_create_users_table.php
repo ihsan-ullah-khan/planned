@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('user_type', 1)->default('U');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

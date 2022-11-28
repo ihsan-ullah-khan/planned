@@ -4,7 +4,7 @@
         <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="/">Planned</a>
+            <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="/">Planned <i class="text-3xl font-semibold text-red-700">.</i></a>
 
             <!-- Image Logo -->
             {{--        <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">--}}
@@ -18,34 +18,18 @@
             </button>
 
             <div
-                class="navbar-collapse offcanvas-collapse items-center justify-between lg:flex lg:flex-grow lg:items-center lg:justify-between"
+                class="navbar-collapse offcanvas-collapse items-center justify-between lg:flex lg:flex-grow lg:items-center lg:justify-between mt-2"
                 id="navbarsExampleDefault">
                 <div>
-                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
+                    <ul class="pl-4 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
                         <li>
-                            <a class="nav-link page-scroll" href="#">Products</a>
+                            <a class="nav-link page-scroll" href="#">About</a>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#">Pricing</a>
+                            <a class="nav-link page-scroll" href="#">FAQ</a>
                         </li>
                         <li>
-                            <a class="nav-link page-scroll" href="#">Resources</a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" href="#">For partners</a>
-                        </li>
-{{--                                        <li class="dropdown">--}}
-{{--                                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>--}}
-{{--                                            <div class="dropdown-menu" aria-labelledby="dropdown01">--}}
-{{--                                                <a class="dropdown-item page-scroll" href="article.html">Article Details</a>--}}
-{{--                                                <div class="dropdown-divider"></div>--}}
-{{--                                                <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>--}}
-{{--                                                <div class="dropdown-divider"></div>--}}
-{{--                                                <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>--}}
-{{--                                            </div>--}}
-{{--                                        </li>--}}
-                        <li>
-                            <a class="nav-link page-scroll" href="#">Marketplace</a>
+                            <a class="nav-link page-scroll" href="#">Experiences</a>
                         </li>
                     </ul>
                 </div>
@@ -54,14 +38,17 @@
                         @if(\Illuminate\Support\Facades\Auth::id())
                             <li class="dropdown">
                                 <a class="nav-link" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-8">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" class="w-8 h-8 -mt-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+                                </a>
+                                <div class="dropdown-menu mr-2 rounded-xl" aria-labelledby="dropdown01">
                                     <a class="dropdown-item page-scroll" href="article.html">{{ \Illuminate\Support\Facades\Auth::user()->name }}</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item page-scroll" href="terms.html">Settings</a>
+                                    <a class="dropdown-item page-scroll" href="{{ route('bookings.index') }}">Bookings</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item page-scroll" href="{{ route('messages.index') }}">Messages</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item page-scroll" href="#"
                                        onclick="document.getElementById('formlogout').submit();"
@@ -101,8 +88,11 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('register') }}" type="button" class="inline-block px-4 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight italic rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
+                            <a href="{{ route('register') }}">
+                            <button
+                               type="button" class="inline-block px-4 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight italic rounded-full shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out">
                                 Sign up for free
+                            </button>
                             </a>
                         </li>
                         @endif

@@ -23,6 +23,8 @@ class occasion extends Component
      */
     public function render()
     {
-        return view('components.occasion');
+        return view('components.occasion', [
+            'occasions' => \App\Models\Occasion::latest()->filter()->paginate(6),
+        ]);
     }
 }

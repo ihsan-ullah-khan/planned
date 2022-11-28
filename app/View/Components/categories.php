@@ -2,6 +2,8 @@
 
 namespace App\View\Components;
 
+use App\Models\Category;
+use App\Models\Experience;
 use Illuminate\View\Component;
 
 class categories extends Component
@@ -23,6 +25,8 @@ class categories extends Component
      */
     public function render()
     {
-        return view('components.categories');
+        return view('components.categories', [
+            'categories' => Category::latest()->filter(request(['search']))->paginate(9),
+        ]);
     }
 }
